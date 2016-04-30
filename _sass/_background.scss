@@ -1,0 +1,8 @@
+@include breakpoint(600px) {
+	body {
+		background: white;
+		background-image: url("../images/bg-large.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}

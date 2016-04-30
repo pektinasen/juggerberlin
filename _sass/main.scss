@@ -42,10 +42,13 @@ $on-laptop:        800px;
 
 // Import libraries
 @import "bootstrap-sass/bootstrap";
+@import "breakpoint/breakpoint";
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
         "layout",
-        "syntax-highlighting"
+        "syntax-highlighting",
+        "background",
+        "navbar"
 ;

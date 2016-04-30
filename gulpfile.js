@@ -17,9 +17,6 @@ var sassOptions = {
     importer: function(uri, prev, done) {
         done(sass.compiler.types.NULL);
     },
-    sources: [
-      {globOpts: { ignore: ["eyeglass/site"] }}
-    ]
   }
 }; 
 
@@ -68,7 +65,7 @@ gulp.task('sass', function () {
  */
 gulp.task('watch', function () {
     gulp.watch('_sass/*.scss', ['sass']);
-    gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
+    gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 
 /**
