@@ -3514,41 +3514,41 @@ tbody.collapse.in {
     z-index: 2;
     margin-left: -1px; }
 
-.nav, nav ul {
+.nav, header nav ul {
   margin-bottom: 0;
   padding-left: 0;
   list-style: none; }
-  .nav:before, nav ul:before, .nav:after, nav ul:after {
+  .nav:before, header nav ul:before, .nav:after, header nav ul:after {
     content: " ";
     display: table; }
-  .nav:after, nav ul:after {
+  .nav:after, header nav ul:after {
     clear: both; }
-  .nav > li, nav ul > li {
+  .nav > li, header nav ul > li {
     position: relative;
     display: block; }
-    .nav > li > a, nav ul > li > a {
+    .nav > li > a, header nav ul > li > a {
       position: relative;
       display: block;
       padding: 10px 15px; }
-      .nav > li > a:hover, nav ul > li > a:hover, .nav > li > a:focus, nav ul > li > a:focus {
+      .nav > li > a:hover, header nav ul > li > a:hover, .nav > li > a:focus, header nav ul > li > a:focus {
         text-decoration: none;
         background-color: #eeeeee; }
-    .nav > li.disabled > a, nav ul > li.disabled > a {
+    .nav > li.disabled > a, header nav ul > li.disabled > a {
       color: #777777; }
-      .nav > li.disabled > a:hover, nav ul > li.disabled > a:hover, .nav > li.disabled > a:focus, nav ul > li.disabled > a:focus {
+      .nav > li.disabled > a:hover, header nav ul > li.disabled > a:hover, .nav > li.disabled > a:focus, header nav ul > li.disabled > a:focus {
         color: #777777;
         text-decoration: none;
         background-color: transparent;
         cursor: not-allowed; }
-  .nav .open > a, nav ul .open > a, .nav .open > a:hover, nav ul .open > a:hover, .nav .open > a:focus, nav ul .open > a:focus {
+  .nav .open > a, header nav ul .open > a, .nav .open > a:hover, header nav ul .open > a:hover, .nav .open > a:focus, header nav ul .open > a:focus {
     background-color: #eeeeee;
     border-color: #337ab7; }
-  .nav .nav-divider, nav ul .nav-divider {
+  .nav .nav-divider, header nav ul .nav-divider {
     height: 1px;
     margin: 9px 0;
     overflow: hidden;
     background-color: #e5e5e5; }
-  .nav > li > a > img, nav ul > li > a > img {
+  .nav > li > a > img, header nav ul > li > a > img {
     max-width: none; }
 
 .nav-tabs {
@@ -3570,13 +3570,13 @@ tbody.collapse.in {
       border-bottom-color: transparent;
       cursor: default; }
 
-.nav-pills > li, nav ul > li {
+.nav-pills > li, header nav ul > li {
   float: left; }
-  .nav-pills > li > a, nav ul > li > a {
+  .nav-pills > li > a, header nav ul > li > a {
     border-radius: 4px; }
-  .nav-pills > li + li, nav ul > li + li {
+  .nav-pills > li + li, header nav ul > li + li {
     margin-left: 2px; }
-  .nav-pills > li.active > a, nav ul > li.active > a, .nav-pills > li.active > a:hover, nav ul > li.active > a:hover, .nav-pills > li.active > a:focus, nav ul > li.active > a:focus {
+  .nav-pills > li.active > a, header nav ul > li.active > a, .nav-pills > li.active > a:hover, header nav ul > li.active > a:hover, .nav-pills > li.active > a:focus, header nav ul > li.active > a:focus {
     color: #fff;
     background-color: #337ab7; }
 
@@ -4244,14 +4244,14 @@ a.label:hover, a.label:focus {
     top: 0;
     padding: 1px 5px; }
   .list-group-item.active > .badge,
-  .nav-pills > .active > a > .badge, nav ul > .active > a > .badge {
+  .nav-pills > .active > a > .badge, header nav ul > .active > a > .badge {
     color: #337ab7;
     background-color: #fff; }
   .list-group-item > .badge {
     float: right; }
   .list-group-item > .badge + .badge {
     margin-right: 5px; }
-  .nav-pills > li > a > .badge, nav ul > li > a > .badge {
+  .nav-pills > li > a > .badge, header nav ul > li > a > .badge {
     margin-left: 3px; }
 
 a.badge:hover, a.badge:focus {
@@ -5559,7 +5559,7 @@ button.close {
 .clearfix:after {
   clear: both; }
 
-.center-block {
+.center-block, header nav {
   display: block;
   margin-left: auto;
   margin-right: auto; }
@@ -5915,9 +5915,8 @@ pre {
  * Site header
  */
 .site-header {
-  border-top: 5px solid #424242;
-  border-bottom: 1px solid #e8e8e8;
   min-height: 56px;
+  text-align: center;
   position: relative; }
 
 .site-title {
@@ -5979,7 +5978,6 @@ pre {
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid #e8e8e8;
   padding: 30px 0; }
 
 .footer-heading {
@@ -6224,3 +6222,12 @@ pre {
     background-image: url("../images/bg-large.jpg");
     background-repeat: no-repeat;
     background-size: cover; } }
+
+header nav {
+  display: inline-block;
+  background: rgba(50, 50, 50, 0.7); }
+  header nav > ul > li > a {
+    border-radius: 0; }
+  header nav > ul > li > a:hover {
+    background-color: rgba(50, 50, 50, 0.95);
+    color: white; }
